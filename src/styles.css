@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  scrollbar-width: none;
+}
+*::-webkit-scrollbar {
+  display: none;
+}
+
+::selection {
+  background: rgba(16, 185, 129, 0.25);
+}
+
+input:focus {
+  outline: none;
+}

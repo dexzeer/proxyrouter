@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <rect width="512" height="512" rx="96" fill="#18181b"/>
+  <!-- Lines -->
+  <line x1="256" y1="240" x2="256" y2="104" stroke="#52525b" stroke-width="4" stroke-linecap="round"/>
+  <line x1="232" y1="268" x2="120" y2="384" stroke="#52525b" stroke-width="4" stroke-linecap="round"/>
+  <line x1="280" y1="268" x2="392" y2="384" stroke="#52525b" stroke-width="4" stroke-linecap="round"/>
+  <!-- Center dot (big) -->
+  <circle cx="256" cy="256" r="32" fill="#a1a1aa"/>
+  <!-- Node dots -->
+  <circle cx="256" cy="88" r="14" fill="#a1a1aa"/>
+  <circle cx="104" cy="400" r="14" fill="#a1a1aa"/>
+  <circle cx="408" cy="400" r="14" fill="#a1a1aa"/>
+</svg>

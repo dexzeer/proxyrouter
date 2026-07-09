@@ -1,0 +1,5 @@
+.mimocode
+src-tauri/target
+node_modules
+proxyrouter.zip
+dist
