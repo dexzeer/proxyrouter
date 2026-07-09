@@ -1,6 +1,12 @@
-﻿<div align="center">
+<div align="center">
 
-<img src="./github-logo.png" alt="ProxyRouter" width="400">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./src-tauri/icons/proxyrouter-dark.png">
+  <source media="(prefers-color-scheme: light)" srcset="./src-tauri/icons/proxyrouter-light.png">
+  <img alt="ProxyRouter" src="./src-tauri/icons/proxyrouter-light.png" width="600">
+</picture>
+
+# ProxyRouter
 
 **A lightweight local AI proxy that unifies multiple providers behind a single OpenAI-compatible endpoint.**
 
