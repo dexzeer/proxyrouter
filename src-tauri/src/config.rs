@@ -9,7 +9,6 @@ pub struct AppConfig {
     pub proxy_port: u16,
     #[serde(rename = "proxyApiKey", default)]
     pub proxy_api_key: String,
-    /// Maps short model name -> provider id that should handle it
     #[serde(rename = "modelPriorities", default)]
     pub model_priorities: std::collections::HashMap<String, String>,
 }

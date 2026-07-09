@@ -16,18 +16,18 @@
 
 ## What it does
 
-ProxyRouter sits between your AI tools and provider APIs. You add providers (OpenAI, Anthropic, Google, DeepSeek, Xiaomi, Mistral, and 150+ more via models.dev), pick which models to expose, and point your tools at `localhost:7144` — one API key, one endpoint, every model.
+ProxyRouter sits between your AI tools and provider APIs. You add providers (OpenAI, Anthropic, Google, DeepSeek, Xiaomi, Mistral, and 150+ more via models.dev), pick which models to expose, and point your tools at `localhost:7144`. One API key, one endpoint, every model.
 
 ## Features
 
-- **150+ providers** pulled from [models.dev](https://models.dev) — OpenAI, Anthropic, Google, DeepSeek, Xiaomi, Mistral, Cohere, Meta, and many more
-- **Single OpenAI-compatible endpoint** — works with any tool that speaks the OpenAI API format
-- **One API key** — generate, copy, reset. Your tools only need this one key
-- **Model routing** — route requests to any provider by model name
-- **Duplicate resolution** — when multiple providers serve the same model, pick which one handles it
-- **Dark minimal UI** — 400×500 window with custom title bar, sidebar navigation
-- **Persistent config** — everything saved to `~/.ai-gateway/config.json`
-- **Zero dependencies for users** — just install and run
+- **150+ providers** pulled from [models.dev](https://models.dev), including OpenAI, Anthropic, Google, DeepSeek, Xiaomi, Mistral, Cohere, Meta, and many more
+- **Single OpenAI-compatible endpoint** that works with any tool speaking the OpenAI API format
+- **One API key** to generate, copy, and reset. Your tools only need this one key
+- **Model routing** to route requests to any provider by model name
+- **Duplicate resolution** when multiple providers serve the same model, pick which one handles it
+- **Dark minimal UI** with 400x500 window, custom title bar, and sidebar navigation
+- **Persistent config** saved to `~/.ai-gateway/config.json`
+- **Zero dependencies for users**, just install and run
 
 ## Quick start
 
@@ -57,9 +57,9 @@ The installer will be in `src-tauri/release/`.
 
 ## Usage
 
-1. **Add a provider** — go to Providers, pick one from the list, enter your API key
-2. **Select models** — check the models you want to route through the proxy
-3. **Start the server** — go to Server, click Start
+1. **Add a provider**, go to Providers, pick one from the list, enter your API key
+2. **Select models**, check the models you want to route through the proxy
+3. **Start the server**, go to Server, click Start
 4. **Point your tools** at `http://localhost:7144/v1` with your proxy API key
 
 ### Example: curl

@@ -2,7 +2,7 @@
   "$schema": "https://raw.githubusercontent.com/nicholasgasior/tauri-config-schema/tauri-v2/schema.json",
   "productName": "ProxyRouter",
   "version": "0.1.0",
-  "identifier": "com.proxyrouter.app",
+  "identifier": "com.dexzeer.proxyrouter",
   "build": {
     "frontendDist": "../dist",
     "devUrl": "http://localhost:1420",

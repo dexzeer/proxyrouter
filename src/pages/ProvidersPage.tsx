@@ -83,7 +83,6 @@ export function ProvidersPage({ config, setConfig }: Props) {
 
   return (
     <div className="flex flex-col h-full p-3 gap-2">
-      {/* API Key */}
       <div className="space-y-1 shrink-0">
         <span className="text-[10px] text-zinc-500 uppercase tracking-wider">API Key</span>
         <div className="flex items-center gap-1">
@@ -119,7 +118,6 @@ export function ProvidersPage({ config, setConfig }: Props) {
         </div>
       </div>
 
-      {/* Active providers */}
       <div className="space-y-1.5 shrink-0">
         <div className="flex items-center justify-between">
           <h2 className="text-sm font-semibold text-zinc-200">Active Providers</h2>
@@ -174,7 +172,6 @@ export function ProvidersPage({ config, setConfig }: Props) {
         ))}
       </div>
 
-      {/* Available providers from models.dev */}
       <div className="flex-1 min-h-0 flex flex-col gap-1.5">
         <div className="border-t border-zinc-800/50 pt-2 space-y-1.5">
           <div className="flex items-center justify-between">

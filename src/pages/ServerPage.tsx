@@ -38,7 +38,6 @@ export function ServerPage({ config, setConfig }: Props) {
 
   const resolvePriority = async (shortId: string, providerId: string) => {
     const newPriorities = { ...config.modelPriorities, [shortId]: providerId };
-    // Always save to config so find_duplicates can see it
     await setConfig({ ...config, modelPriorities: newPriorities });
 
     const remaining = await invoke<DuplicateModel[]>("find_duplicates");
@@ -47,7 +46,6 @@ export function ServerPage({ config, setConfig }: Props) {
       const msg = await invoke<string>("start_server", { port: config.proxyPort });
       setRunning(true);
       setLog(msg);
-      // If not remembering, clear priorities after server started
       if (!remember) {
         await setConfig({ ...config, modelPriorities: {} });
       }
@@ -98,7 +96,6 @@ export function ServerPage({ config, setConfig }: Props) {
         <p className="text-[11px] text-zinc-600 font-mono">{log}</p>
       )}
 
-      {/* Duplicate resolution popup */}
       {duplicates.length > 0 && (
         <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50">
           <div className="bg-zinc-900 border border-zinc-800 rounded-xl p-4 w-80 max-h-[80vh] flex flex-col shadow-2xl">

@@ -97,7 +97,6 @@ async fn fetch_models_dev_providers(
     state: State<'_, AppState>,
     force: Option<bool>,
 ) -> Result<Vec<ModelsDevProvider>, String> {
-    // Return cached data if fresh and not forced
     if force != Some(true) {
         let cache = state.providers_cache.lock().unwrap();
         if let Some(ref c) = *cache {
@@ -152,7 +151,6 @@ async fn fetch_models_dev_providers(
         })
         .unwrap_or_default();
 
-    // Store in cache
     let now = SystemTime::now()
         .duration_since(UNIX_EPOCH)
         .unwrap()

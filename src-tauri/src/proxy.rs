@@ -99,7 +99,6 @@ async fn handle_request(
         return Ok(cors(Response::new(Full::new(Bytes::new()))));
     }
 
-    // Health check
     if uri == "/" || uri == "/health" {
         let body = serde_json::json!({ "status": "ok", "port": config.proxy_port });
         return Ok(cors(Response::builder()
@@ -170,7 +169,6 @@ async fn forward(body: Bytes, config: &AppConfig) -> Result<Response<Full<Bytes>
 
     eprintln!("[proxy] incoming model: {}", model);
 
-    // Match provider by full ID or by suffix, respecting priorities
     let short = model.split('/').last().unwrap_or(model);
     let priority_provider = config.model_priorities.get(short);
 
@@ -204,7 +202,6 @@ async fn forward(body: Bytes, config: &AppConfig) -> Result<Response<Full<Bytes>
 
     eprintln!("[proxy] matched provider: {} -> {}", provider.name, full_model_id);
 
-    // Rewrite model to the full upstream ID
     req["model"] = serde_json::json!(full_model_id);
 
     let url = format!("{}/chat/completions", provider.base_url.trim_end_matches('/'));
